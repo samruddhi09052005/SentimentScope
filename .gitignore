@@ -1,13 +1,38 @@
+# Virtual Environments
 .venv/
 venv/
+env/
+ENV/
+
+# Python cache & artifacts
 __pycache__/
 *.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Environment and secrets
 .env
 .env.*
 !.env.example
-.pytest_cache/
 .streamlit/secrets.toml
-data/raw/
-data/processed/
+
+# Datasets and cache
+data/
+*.parquet
+*.arrow
+*.csv
+
+# Model artifacts and binary weights
+models/*.joblib
+models/*.pkl
+models/*.bin
+models/*.onnx
 models/checkpoints/
 models/transformer/
+
+# Visualizations / logs
+*.png
+*.jpg
+*.jpeg
+*.log
